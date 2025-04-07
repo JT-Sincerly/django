@@ -1,52 +1,117 @@
-======
-Django
-======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Jt Exchange</h1>
+  </header>
+  <main>
+    <p>Kindly click the button below to proceed.</p>
+    <button onclick="location.href='next-page.html'">Proceed</button>
+  </main>
+  <footer>
+    <p></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
 
-Django is a high-level Python web framework that encourages rapid development
-and clean, pragmatic design. Thanks for checking it out.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1></h1>
+  <form id="transaction-form">
+    <label for="transaction-purpose">Transaction Purpose:</label>
+    <select id="transaction-purpose" name="transaction-purpose">
+      <option value="buying">Buying</option>
+      <option value="selling">Selling</option>
+      <option value="swapping">Swapping</option>
+    </select>
+    
+    <label for="sending-currency">Sending:</label>
+    <select id="sending-currency" name="sending-currency">
+      <option value="local-currency">Local Currency (FIAT)</option>
+      <option value="bitcoin">Bitcoin (BTC)</option>
+      <option value="ethereum">Ethereum (ETH)</option>
+      <option value="binance-coin">Binance Coin (BNB)</option>
+      <option value="polygon">Polygon (POL)</option>
+      <option value="cardano">Cardano (ADA)</option>
+      <option value="ripple">Ripple (XRP)</option>
+      <option value="solana">Solana (SOL)</option>
+      <option value="polkadot">Polkadot (DOT)</option>
+      <option value="bitcoin-cash">Bitcoin Cash (BCH)</option>
+      <option value="atok">Atok</option>
+      <option value="core">Core</option>
+      <option value="shiba-inu">Shiba Inu (SHIB)</option>
+      <option value="litecoin">Litecoin (LTC)</option>
+      <option value="dogecoin">Dogecoin (DOGE)</option>
+      <option value="rubi">Rubi (RBL)</option>
+    </select>
+    
+    <label for="receiving-currency">Receiving:</label>
+    <select id="receiving-currency" name="receiving-currency">
+      <option value="local-currency">Local Currency (FIAT)</option>
+      <option value="bitcoin">Bitcoin (BTC)</option>
+      <option value="ethereum">Ethereum (ETH)</option>
+      <option value="binance-coin">Binance Coin (BNB)</option>
+      <option value="polygon">Polygon (POL)</option>
+      <option value="cardano">Cardano (ADA)</option>
+      <option value="ripple">Ripple (XRP)</option>
+      <option value="solana">Solana (SOL)</option>
+      <option value="polkadot">Polkadot (DOT)</option>
+      <option value="bitcoin-cash">Bitcoin Cash (BCH)</option>
+      <option value="atok">Atok</option>
+      <option value="core">Core</option>
+      <option value="shiba-inu">Shiba Inu (SHIB)</option>
+      <option value="litecoin">Litecoin (LTC)</option>
+      <option value="dogecoin">Dogecoin (DOGE)</option>
+      <option value="rubi">Rubi (RBL)</option>
+    </select>
+    
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    
+    <button id="submit-button">Submit request</button>
 
-All documentation is in the "``docs``" directory and online at
-https://docs.djangoproject.com/en/stable/. If you're just getting started,
-here's how we recommend you read the docs:
 
-* First, read ``docs/intro/install.txt`` for instructions on installing Django.
 
-* Next, work through the tutorials in order (``docs/intro/tutorial01.txt``,
-  ``docs/intro/tutorial02.txt``, etc.).
+<footer>
+  <p>&copy;2025 Jt Exchange.</p>
+  <button onclick="showTermsAndConditions()">Terms and Conditions</button>
+  <div id="terms-and-conditions" style="display:none;">
+    <h2>Terms and Conditions</h2>
+    <p>Last updated: March 29, 2025</p>
+    <p>Please read these Terms and Conditions carefully before using the Jt Exchange website.</p>
+    <p>By accessing or using the website, you agree to be bound by these Terms and Conditions.</p>
+  </div>
+  <h2>Customer Support</h2>
+  <p>Phone: +234 802 835 6771</p>
+  <p>Whatsapp: +234 807 594 9900<p>
+  <p>Email: <a href="mailto:enochakintayo62@gmail.com">enochakintayo662@gmail.com</a></p>
+</footer>
 
-* If you want to set up an actual deployment server, read
-  ``docs/howto/deployment/index.txt`` for instructions.
+<script>
+  function showTermsAndConditions() {
+    var termsAndConditionsDiv = document.getElementById("terms-and-conditions");
+    if (termsAndConditionsDiv.style.display === "none") {
+      termsAndConditionsDiv.style.display = "block";
+    } else {
+      termsAndConditionsDiv.style.display = "none";
+    }
+  }
+</script>
 
-* You'll probably want to read through the topical guides (in ``docs/topics``)
-  next; from there you can jump to the HOWTOs (in ``docs/howto``) for specific
-  problems, and check out the reference (``docs/ref``) for gory details.
-
-* See ``docs/README`` for instructions on building an HTML version of the docs.
-
-Docs are updated rigorously. If you find any problems in the docs, or think
-they should be clarified in any way, please take 30 seconds to fill out a
-ticket here: https://code.djangoproject.com/newticket
-
-To get more help:
-
-* Join the `Django Discord community <https://chat.djangoproject.com>`_.
-
-* Join the community on the `Django Forum <https://forum.djangoproject.com/>`_.
-
-To contribute to Django:
-
-* Check out https://docs.djangoproject.com/en/dev/internals/contributing/ for
-  information about getting involved.
-
-To run Django's test suite:
-
-* Follow the instructions in the "Unit tests" section of
-  ``docs/internals/contributing/writing-code/unit-tests.txt``, published online at
-  https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/unit-tests/#running-the-unit-tests
-
-Supporting the Development of Django
-====================================
-
-Django's development depends on your contributions.
-
-If you depend on Django, remember to support the Django Software Foundation: https://www.djangoproject.com/fundraising/
